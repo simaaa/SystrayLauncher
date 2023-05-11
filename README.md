@@ -54,13 +54,13 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 
 ## Start
 ```
-PS ".\systray_launcher.ps1"
+PS .\systray_launcher.ps1
 ```
 ## Start with settings name  parameter
 ```
-PS ".\systray_launcher.ps1 <settings_name>"
+PS .\systray_launcher.ps1 <settings_name>
 ```
 ```
-PS ".\systray_launcher.ps1 menu_items_ora"
+PS .\systray_launcher.ps1 menu_items_ora
 ```
 
