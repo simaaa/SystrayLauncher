@@ -60,3 +60,7 @@ PS ".\systray_launcher.ps1"
 ```
 PS ".\systray_launcher.ps1 <settings_name>"
 ```
+```
+PS ".\systray_launcher.ps1 menu_items_ora"
+```
+
