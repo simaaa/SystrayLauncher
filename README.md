@@ -56,11 +56,12 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 ```
 PS .\systray_launcher.ps1
 ```
-## Start with settings name  parameter
+## Start with settings name parameter
+#### Create startup script file and call with settings name parameter
 ```
-PS .\systray_launcher.ps1 <settings_name>
+.\systray_launcher.ps1 <settings_name>
 ```
 ```
-PS .\systray_launcher.ps1 menu_items_ora
+.\systray_launcher.ps1 menu_items_ora
 ```
 
