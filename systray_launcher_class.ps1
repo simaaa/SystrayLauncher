@@ -113,10 +113,10 @@ class SysTrayForm : System.Windows.Forms.Form {
 		$this.MenuItems = $this.Config | Select -ExpandProperty $this.Settings.menu_list_name
 		If ( $this.DebugSettings ) { $this.WriteSettings(); }
 		
-		If ( $this.Settings.tooltip_text ) { $this.SystrayTooltipText = $this.Settings.tooltip_text }
 		If ( -Not $this.Settings ) { Throw "[$MethodName] Not found the settings!"; }
 		If ( -Not $this.MenuItems ) { Throw "[$MethodName] Not found the menu items!"; }
 		If ( -Not $this.Settings.systray_icon_file_name ) { Throw "[$MethodName] Not found the Systray icon settings! (systray_icon_file_name)"; }
+		If ( $this.Settings.tooltip_text ) { $this.SystrayTooltipText = $this.Settings.tooltip_text }
 		Try {
 			$this.Icon = Invoke-Command $this.IntfGetIcon -ArgumentList ($this.Settings.systray_icon_file_name, $this.Settings.systray_icon_index)
 		} Catch {
