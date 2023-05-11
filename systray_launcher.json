@@ -1,0 +1,43 @@
+{
+	"settings_name" : "settings_demo",
+	"settings_demo" : {
+		"tooltip_text" : "SysTrayLauncher",
+		"systray_icon_file_name" : "shell32.dll",
+		"systray_icon_index" : "317",
+		"menu_list_name" : "menu_items_demo",
+		"hide_console" : false,
+		"hide_console_handler_menu" : false
+	},
+	"settings_ora" : {
+		"tooltip_text" : "SysTrayLauncher",
+		"systray_icon_file_name" : "C:\\Oracle\\OracleRDBMS_21.3\\Installer\\setup.exe",
+		"systray_icon_index" : "",
+		"menu_list_name" : "menu_items_ora",
+		"hide_console" : true,
+		"hide_console_handler_menu" : true
+	},
+	"menu_items_demo" : [
+		{ "name" : "notepad", "program" : "notepad.exe", "args" : "\"teszt.txt\"", "image_file" : "shell32.dll", "image_index" : "42" },
+		{ "name" : "demo.cmd", "program" : ".\\demo.cmd", "args" : "arg1, arg2", "image_file" : "shell32.dll", "image_index" : "42" },
+		{ "name" : "PowerShell Script", "program" : "powershell.exe", "args" : "Write-Host \"OK\"; TIMEOUT /t 3;", "image_file" : "shell32.dll", "image_index" : "42" },
+		{ "name" : "PowerShell File", "program" : "powershell.exe", "args" : "-File \".\\demo.ps1\"", "image_file" : "shell32.dll", "image_index" : "42" },
+		{ "name" : "PLSQL Developer 15", "program" : "C:\\Program Files\\PLSQL Developer 15\\plsqldev.exe", "args" : "", "image_file" : "C:\\Program Files\\PLSQL Developer 15\\plsqldev.exe", "image_index" : "" },
+		{ "name" : "-", "program" : "", "args" : "", "image_file" : "", "image_index" : "" },
+		{ "name" : "Sleep", "program" : "powershell.exe", "args" : "Write-Host \"Starting sleep...\"; TIMEOUT /t 3;", "image_file" : "imageres.dll", "image_index" : "97" },
+		{ "name" : "-", "program" : "", "args" : "", "image_file" : "", "image_index" : "" }
+	],
+	"menu_items_ora" : [
+		{ "name" : "Tomcat START", "program" : "C:\\Oracle\\_apache-tomcat-9.0.30\\bin\\startup.bat", "args" : "", "image_file" : "C:\\Oracle\\_apache-tomcat-9.0.30\\bin\\tomcat9.exe", "image_index" : "42" },
+		{ "name" : "Tomcat STOP", "program" : "C:\\Oracle\\_apache-tomcat-9.0.30\\bin\\shutdown.bat", "args" : "", "image_file" : "C:\\Oracle\\_apache-tomcat-9.0.30\\bin\\tomcat9.exe", "image_index" : "42" },
+		{ "name" : "-", "program" : "", "args" : "", "image_file" : "", "image_index" : "" },
+		{ "name" : "TNSNAMES", "program" : "C:\\Program Files\\Notepad++\\notepad++.exe", "args" : "C:\\Oracle\\OracleRDBMS_21.3\\db\\homes\\OraDB21Home1\\network\\admin\\tnsnames.ora", "image_file" : "C:\\Program Files\\Notepad++\\notepad++.exe", "image_index" : "" },
+		{ "name" : "Oracle21 START", "program" : "C:\\Oracle\\_db_start.cmd", "args" : "", "image_file" : "C:\\Oracle\\OracleRDBMS_21.3\\Installer\\setup.exe", "image_index" : "" },
+		{ "name" : "Oracle21 STOP", "program" : "C:\\Oracle\\_db_stop.cmd", "args" : "", "image_file" : "C:\\Oracle\\OracleRDBMS_21.3\\Installer\\setup.exe", "image_index" : "" },
+		{ "name" : "-", "program" : "", "args" : "", "image_file" : "", "image_index" : "" },
+		{ "name" : "SQLcl ORCL", "program" : "C:\\Oracle\\_SQLcl_ORCL.cmd", "args" : "", "image_file" : "C:\\Oracle\\OracleRDBMS_21.3\\Installer\\bin\\sql.exe", "image_index" : "" },
+		{ "name" : "Sqlplus ORCL", "program" : "C:\\Oracle\\_sqlplus_ORCL.cmd", "args" : "", "image_file" : "C:\\Oracle\\OracleRDBMS_21.3\\Installer\\bin\\sql.exe", "image_index" : "" },
+		{ "name" : "Sqlplus PDB1", "program" : "C:\\Oracle\\_sqlplus_PDB1.cmd", "args" : "", "image_file" : "C:\\Oracle\\OracleRDBMS_21.3\\Installer\\bin\\sql.exe", "image_index" : "" },
+		{ "name" : "PLSQL Developer 15", "program" : "C:\\Program Files\\PLSQL Developer 15\\plsqldev.exe", "args" : "", "image_file" : "C:\\Program Files\\PLSQL Developer 15\\plsqldev.exe", "image_index" : "" },
+		{ "name" : "-", "program" : "", "args" : "", "image_file" : "", "image_index" : "" }		
+	]
+}
