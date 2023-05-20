@@ -66,6 +66,6 @@ PS .\systray_launcher.ps1
 .\systray_launcher.ps1 <settings_name>
 ```
 ```
-.\systray_launcher.ps1 menu_items_ora
+.\systray_launcher.ps1 menu_items_demo
 ```
 
