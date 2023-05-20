@@ -1,6 +1,8 @@
 # Systray launcher for windows
-<img src="https://github.com/simaaa/SystrayLauncher/blob/main/screenshot.jpg?raw=true" />
-
+![](https://github.com/simaaa/SystrayLauncher/blob/main/screenshot_demo.jpg) |
+![](https://github.com/simaaa/SystrayLauncher/blob/main/screenshot_ora.jpg) |
+![](https://github.com/simaaa/SystrayLauncher/blob/main/screenshot_git.jpg)
+	
 ## Description
 Systray launcher is PowerShell script that creates an icon on your windows tray for customized context menu to launch programs very quickly. The menu items are read from the json configuration file.
 
