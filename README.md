@@ -3,6 +3,7 @@
 	<img alt="aa" src="https://github.com/simaaa/SystrayLauncher/blob/main/screenshot_demo.jpg" width="200" height="200">
 	<img alt="bb" src="https://github.com/simaaa/SystrayLauncher/blob/main/screenshot_ora.jpg" width="200" height="200">
 	<img alt="cc" src="https://github.com/simaaa/SystrayLauncher/blob/main/screenshot_git.jpg" width="200" height="200">
+	<img alt="cc" src="https://github.com/simaaa/SystrayLauncher/blob/main/screenshot_submenu.jpg" width="200" height="200">
 </p>
 
 ## Description
@@ -28,6 +29,19 @@ Systray launcher is PowerShell script that creates an icon on your windows tray 
 		{ "name" : "PLSQL Developer 15", "program" : "C:\\Program Files\\PLSQL Developer 15\\plsqldev.exe", "args" : "", "image_file" : "C:\\Program Files\\PLSQL Developer 15\\plsqldev.exe", "image_index" : "" },
 		{ "name" : "-", "program" : "", "args" : "", "image_file" : "", "image_index" : "" },
 		{ "name" : "Sleep", "program" : "powershell.exe", "args" : "Write-Host \"Starting sleep...\"; TIMEOUT /t 3;", "image_file" : "imageres.dll", "image_index" : "97" },
+		{ "name" : "-", "program" : "", "args" : "", "image_file" : "", "image_index" : "" },
+		{ "name" : "Submenu-A", "program" : "", "args" : "", "image_file" : "shell32.dll", "image_index" : "42"
+			,"submenu":[
+				{ "name" : "A-11", "program" : "powershell.exe", "args" : "Write-Host \"...11...\"; TIMEOUT /t 3;", "image_file" : "shell32.dll", "image_index" : "25" },
+				{ "name" : "A-22", "program" : "powershell.exe", "args" : "Write-Host \"...22...\"; TIMEOUT /t 3;", "image_file" : "shell32.dll", "image_index" : "25" }
+			]
+		},
+		{ "name" : "Submenu-B", "program" : "", "args" : "", "image_file" : "shell32.dll", "image_index" : "42"
+			,"submenu":[
+				{ "name" : "B-33", "program" : "powershell.exe", "args" : "Write-Host \"...33...\"; TIMEOUT /t 3;", "image_file" : "shell32.dll", "image_index" : "25" },
+				{ "name" : "B-44", "program" : "powershell.exe", "args" : "Write-Host \"...44...\"; TIMEOUT /t 3;", "image_file" : "shell32.dll", "image_index" : "25" }
+			]
+		},
 		{ "name" : "-", "program" : "", "args" : "", "image_file" : "", "image_index" : "" }
 	]
 }

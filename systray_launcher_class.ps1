@@ -129,6 +129,22 @@ class SysTrayForm : System.Windows.Forms.Form {
 		$MethodName = "ContextMenuItemClick"
 		[SysTrayForm]::DEBUG($MethodName, "MenuItemName = $MenuItemName");
 		$Item = $this.MenuItems | Where-Object name -eq $MenuItemName
+		if ( -Not $Item ) {
+			ForEach ($menu in $this.MenuItems) {
+				if ( $menu.submenu ) {
+					$Item = $menu.submenu | Where-Object name -eq $MenuItemName
+					if ($Item) {
+						break
+					}
+				}
+			}
+		}
+		if ( -Not $Item ) {
+			$message = "[$($MethodName)] Not found '$($MenuItemName)' menu item object!"
+			Write-Error $message -Category ObjectNotFound
+			[System.Windows.Forms.MessageBox]::Show($message)
+			return;
+		}
 		try {
 			[SysTrayForm]::DEBUG($MethodName, "Launching program: `"$($Item.program)`" $($Item.args)")
 			$WorkDir = Split-Path $Item.program -Parent
@@ -176,9 +192,20 @@ class SysTrayForm : System.Windows.Forms.Form {
 				return
 			}
 			$item = New-Object System.Windows.Forms.ToolStripMenuItem(($_).name)
-			$item.Add_Click({ $script:Form.ContextMenuItemClick($this); })
 			If ( ($_).image_file ) {
 				$item.image = Invoke-Command $this.IntfGetIcon -ArgumentList (($_).image_file, ($_).image_index)
+			}
+			if ( ($_).submenu ) {
+				ForEach($submenu in ($_).submenu) {
+					$itemSub = New-Object System.Windows.Forms.ToolStripMenuItem($submenu.name)
+					If ( $submenu.image_file ) {
+						$itemSub.image = Invoke-Command $this.IntfGetIcon -ArgumentList ($submenu.image_file, $submenu.image_index)
+					}
+					$itemSub.Add_Click({ $script:Form.ContextMenuItemClick($this); })
+					$item.DropDownItems.Add($itemSub)
+				}
+			} else {
+				$item.Add_Click({ $script:Form.ContextMenuItemClick($this); })
 			}
 			$ContextMenuStrip.Items.Add($item)
 		}
